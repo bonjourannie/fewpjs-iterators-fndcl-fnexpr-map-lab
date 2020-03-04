@@ -13,10 +13,11 @@ const tutorials = [
 
 const titleCased = () => {
   return tutorials.map( line => {
-    let tutorial = line.split(' ')
-    let capitalizedTutorial = 
-      tutorials.map (tutorial => tutorial.charAt(0).toUpperCase() + tutorial.slice(1))
-      let response = capitalizedTutorial.join(' ')
-      return response
+    let tokens = line.split(' ')
+    let capitalizedTokens =
+      tokens.map( token => token.charAt(0).toUpperCase() + token.slice(1) )
+    let response = capitalizedTokens.join(' ')
+    return response
+
   })
 }
